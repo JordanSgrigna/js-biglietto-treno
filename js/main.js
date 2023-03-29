@@ -25,15 +25,17 @@ if (isUserAgeANumber && isUserKilometersANumber) {
         console.log("Il prezzo standard è di : " + userTicketPrice);
         console.log("Applicando lo sconto del 40% per gli over 65: " + userTicketPrice40Discount);
     
-
+        document.getElementById("discountedprice").innerHTML = "Scontato per gli over 65: " + userTicketPrice40Discount.toFixed(2) + "&euro;";
     } else if (userAge < 18) {
         // 20% Discount if age < 18
         let userTicketPrice20Discount = (userTicketPrice * 80 / 100);
         console.log("Il prezzo standard è di : " + userTicketPrice);
         console.log("Applicando lo sconto del 20% per i minorenni: " + userTicketPrice20Discount);
-    
+        
+        document.getElementById("discountedprice").innerHTML = "Scontato per minorenni: " + userTicketPrice20Discount.toFixed(2) + "&euro;";
     } else {
         console.log("Non hai sconti attivi: " + userTicketPrice);
+        document.getElementById("discountedprice").innerHTML = "Non hai sconti attivi";
     }
         
     
@@ -45,6 +47,4 @@ if (isUserAgeANumber && isUserKilometersANumber) {
 document.getElementById("name").innerHTML = userName;
 document.getElementById("surname").innerHTML = userSurname;
 document.getElementById("age").innerHTML = userAge;
-document.getElementById("normalprice").innerHTML = "Prezzo: " + userTicketPrice.toFixed(2) + "&euro";
-document.getElementById("discountedprice").innerHTML = "Scontato per over 65: " + userTicketPrice40Discount.toFixed(2) + "&euro";
-document.getElementById("discountedprice").innerHTML = "Scontato per minorenni: " + userTicketPrice20Discount.toFixed(2) + "&euro";
+document.getElementById("normalprice").innerHTML = "Prezzo: " + userTicketPrice.toFixed(2) + "&euro;";
