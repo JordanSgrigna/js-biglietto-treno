@@ -11,8 +11,32 @@
   <body>
     
     <div class="Container">
+      <div class="row">
+
+        <div class="col">
+
+          <form onsubmit="submitForm(event)">
+            <label for="userName">Nome:</label><br>
+            <input type="text" id="userName" name="userName"><br>
+
+            <label for="userSurname">Cognome:</label><br>
+            <input type="text" id="userSurname" name="userSurname"> <br>
+
+            <label for="userKilometers">Numero di kilometri da percorrere:</label><br>
+            <input type="number" id="userKilometers" name="userKilometers" value="0"><br>
+
+            <label for="userAge">Età:</label><br>
+            <input type="number" id="userAge" name="userAge" value="0"><br>
+
+            <input type="submit" value="Crea il biglietto!"> 
+
+          </form>
+
+        </div>
+
+      </div>
       <div class="row text-center d-flex justify-content-center mt-3">
-        <div class="col-6 card text-center py-3 bg-dark text-white">
+        <div class="col card text-center py-3 bg-dark text-white">
           <h5 class="mb-1">NOME</h5>
           <p id="name" class="mt-1"></p>
         
